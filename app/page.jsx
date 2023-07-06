@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main className="w-full min-h-full bg-black text-white flex flex-col">
+    <main className="w-full max-w-7xl mx-auto min-h-full  flex flex-col">
       test
     </main>
   );
