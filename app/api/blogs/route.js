@@ -41,5 +41,5 @@ export async function GET(request) {
     })
   );
 
-  return NextResponse.json(blogs);
+  return NextResponse.json({blogs}, { status: 200 });
 }
