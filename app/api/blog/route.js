@@ -13,14 +13,14 @@ export async function GET(request) {
   const { searchParams } = new URL(request.url);
   let slug = searchParams.get("id");
 
-  slug.replace(/[^a-z-]|^-|-$|[^a-z-].*[^a-z-]/g, "");
-
   if (!slug) {
     return NextResponse.json(
       { message: "Missing params.", status: 406 },
       { status: 406 }
     );
   }
+
+  slug.replace(/[^a-z-]|^-|-$|[^a-z-].*[^a-z-]/g, "");
 
   if (slug.length <= 2) {
     return NextResponse.json(
@@ -30,7 +30,7 @@ export async function GET(request) {
   }
 
   // blog markdown file path
-  const filePath = path.join(process.cwd(), `app/blogs/${slug}.md`);
+  const filePath = path.join(process.cwd(), `blogs/${slug}.md`);
 
   try {
     // read markdown file

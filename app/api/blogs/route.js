@@ -12,7 +12,7 @@ import remarkHtml from "remark-html";
 export async function GET(request) {
   //   console.log(request);
   // blog files directory
-  const blogsDirectory = path.join(process.cwd(), "app/blogs");
+  const blogsDirectory = path.join(process.cwd(), "blogs");
 
   // read blog files
   const fileNames = fs.readdirSync(blogsDirectory);
@@ -41,5 +41,5 @@ export async function GET(request) {
     })
   );
 
-  return NextResponse.json({blogs}, { status: 200 });
+  return NextResponse.json({ blogs }, { status: 200 });
 }
