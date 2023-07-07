@@ -4,6 +4,8 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
+import { saveMarkdownFormat } from "@/app/api/utils";
+
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
   let slug = searchParams.get("id");
@@ -38,7 +40,7 @@ export async function GET(request) {
       {
         ...data,
         blog_slug: slug,
-        content: content.trim().replace(/\n/g, "\\n").replace(/\r/g, "\\r"),
+        content: saveMarkdownFormat(content.trim()),
       },
       { status: 200 }
     );

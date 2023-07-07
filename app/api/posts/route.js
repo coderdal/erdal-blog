@@ -4,6 +4,8 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
+import { saveMarkdownFormat } from "@/app/api/utils";
+
 export async function GET(request) {
   //   console.log(request);
   // blog files directory
@@ -13,7 +15,7 @@ export async function GET(request) {
   const fileNames = fs.readdirSync(blogsDirectory);
 
   // loop blog files
-  const blogs = await Promise.all(
+  const posts = await Promise.all(
     fileNames.map(async (fileName) => {
       const filePath = path.join(blogsDirectory, fileName);
 
@@ -26,10 +28,10 @@ export async function GET(request) {
       return {
         blog_slug: fileName.replace(".md", ""),
         ...data,
-        content: content.trim().replace(/\n/g, "\\n").replace(/\r/g, "\\r"),
+        content: saveMarkdownFormat(content.trim()),
       };
     })
   );
 
-  return NextResponse.json({ blogs }, { status: 200 });
+  return NextResponse.json({ posts }, { status: 200 });
 }
