@@ -1,6 +1,7 @@
 import "./globals.css";
 
 import Header from "@/app/components/Header/Header";
+import Footer from "@/app/components/Footer/Footer";
 
 export const metadata = {
   title: "Muhammed ERDAL | Blog",
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
       <body>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
