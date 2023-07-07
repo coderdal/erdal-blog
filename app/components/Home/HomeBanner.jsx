@@ -12,7 +12,7 @@ const HomeBanner = () => {
         barındıran yazılar paylaşıyorum.
       </p>
 
-      <div className="flex text-gray-300 max-sm:justify-center max-sm:mt-2">
+      <div className="flex text-gray200 max-sm:justify-center max-sm:mt-2">
         <a
           href="https://github.com/coderdal"
           className="mr-3 hover:text-white transition-colors"
