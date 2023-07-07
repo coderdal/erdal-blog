@@ -12,7 +12,14 @@ export async function GET(request) {
   const blogsDirectory = path.join(process.cwd(), "posts");
 
   // read blog files
-  const fileNames = fs.readdirSync(blogsDirectory);
+  const allFiles = fs.readdirSync(blogsDirectory);
+
+  // sort file names based on modified time
+  const fileNames = allFiles.sort((a, b) => {
+    const fileA = fs.statSync(path.join(blogsDirectory, a));
+    const fileB = fs.statSync(path.join(blogsDirectory, b));
+    return fileB.birthtime.getTime() - fileA.birthtime.getTime();
+  });
 
   // loop blog files
   const posts = await Promise.all(
