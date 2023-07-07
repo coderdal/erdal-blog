@@ -23,5 +23,5 @@
 }
 
 .blog-tag {
-  @apply bg-slate-800 px-1 rounded-sm uppercase;
+  @apply bg-slate-800 px-1 rounded-sm uppercase cursor-default;
 }
