@@ -30,7 +30,7 @@ export async function GET(request) {
   }
 
   // blog markdown file path
-  const filePath = path.join(process.cwd(), `blogs/${slug}.md`);
+  const filePath = path.join(process.cwd(), `posts/${slug}.md`);
 
   try {
     // read markdown file
