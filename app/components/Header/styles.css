@@ -1,5 +1,5 @@
 .nav-link-desktop {
-  @apply text-base py-1.5 rounded-md px-4 hover:text-gray-300 transition-colors;
+  @apply text-base py-1.5 rounded-md px-4 text-gray-400 hover:text-white transition-colors font-bold;
 }
 
 .nav-link-mobile {

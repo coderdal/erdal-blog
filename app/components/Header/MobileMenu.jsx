@@ -9,7 +9,7 @@ const MobileMenu = () => {
           <div className="-my-4 divide-y divide-gray-500/10">
             <div className="space-y-2 py-5 text-xl font-normal">
               <Link href="/" className="nav-link-mobile">
-                About
+                Home
               </Link>
               <Link href="/" className="nav-link-mobile">
                 Blog
