@@ -1,0 +1,27 @@
+.recent-blog {
+  @apply border border-blue-50/10 rounded-md bg-blue-100/10 py-4 px-5;
+}
+
+.recent-blog-title {
+  @apply text-lg lg:text-xl lg:font-semibold font-normal transition-colors hover:text-gray-200 text-white;
+}
+
+.recent-blog-details {
+  @apply flex justify-between mt-2;
+}
+
+.recent-blog-date {
+  @apply flex justify-center;
+}
+
+.recent-blog-tags {
+  @apply flex text-sm font-semibold text-gray-300;
+}
+
+.blog-tag:not(:last-child) {
+  @apply mr-3;
+}
+
+.blog-tag {
+  @apply bg-slate-800 px-1 rounded-sm uppercase;
+}
