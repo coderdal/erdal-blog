@@ -4,11 +4,6 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-// markdown converting libs
-import { remark } from "remark";
-import remarkPresetLintMarkdownStyleGuide from "remark-preset-lint-markdown-style-guide";
-import remarkHtml from "remark-html";
-
 export async function GET(request) {
   //   console.log(request);
   // blog files directory
@@ -28,15 +23,10 @@ export async function GET(request) {
       // seperate markdown contents
       const { data, content } = matter(fileContent);
 
-      const processedContent = await remark()
-        .use(remarkPresetLintMarkdownStyleGuide)
-        .use(remarkHtml)
-        .process(content);
-
       return {
         blog_slug: fileName.replace(".md", ""),
         ...data,
-        content: String(processedContent).trim(),
+        content: content.trim().replace(/\n/g, "\\n").replace(/\r/g, "\\r"),
       };
     })
   );

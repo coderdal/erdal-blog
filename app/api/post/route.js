@@ -4,11 +4,6 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-// markdown converting libs
-import { remark } from "remark";
-import remarkPresetLintMarkdownStyleGuide from "remark-preset-lint-markdown-style-guide";
-import remarkHtml from "remark-html";
-
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
   let slug = searchParams.get("id");
@@ -39,14 +34,12 @@ export async function GET(request) {
     // seperate markdown contents
     const { data, content } = matter(fileContent);
 
-    // convert to html
-    const processedContent = await remark()
-      .use(remarkPresetLintMarkdownStyleGuide)
-      .use(remarkHtml)
-      .process(content);
-
     return NextResponse.json(
-      { ...data, blog_slug: slug, content: String(processedContent).trim() },
+      {
+        ...data,
+        blog_slug: slug,
+        content: content.trim().replace(/\n/g, "\\n").replace(/\r/g, "\\r"),
+      },
       { status: 200 }
     );
   } catch (error) {

@@ -8,7 +8,15 @@ blog_categories: ["Teknoloji", "React"]
 
 selam paragraf **_ben_**
 
+```html
+<div>
+  <h2>test</h2>
+</div>
+```
+
 - First item
 - Second item
 - Third item
 - Fourth item
+
+bye arkjadaslar
