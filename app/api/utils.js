@@ -1,3 +1,3 @@
 export const saveMarkdownFormat = (markdownContent) => {
-  return markdownContent.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
+  return markdownContent.replace(/\\/g, "\\\\");
 };
