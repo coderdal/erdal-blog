@@ -8,9 +8,10 @@ blog_categories: ["Teknoloji", "React"]
 
 selam paragraf **_ben_**
 
-```html
-<h2>test</h2>
-<strong>hhh</strong>
+```js
+var some = code();
+
+alert();
 ```
 
 - First item
@@ -19,3 +20,7 @@ selam paragraf **_ben_**
 - Fourth item
 
 bye arkjadaslar
+
+```
+
+```

@@ -6,5 +6,11 @@ blog_categories: ["Teknoloji", "Programlama"]
 
 # Bu bir örnek blog yazısıdır content falan.
 
+```html
+<header>
+  <h4>test metni</h4>
+</header>
+```
+
 - selam
 - test
