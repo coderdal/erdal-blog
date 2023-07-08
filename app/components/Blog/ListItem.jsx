@@ -6,7 +6,7 @@ const ListItem = ({ title, categories, date, slug }) => {
   return (
     <div className="my-1 py-2 px-4 rounded bg-zinc-950/10 hover:bg-zinc-950 transition-colors flex justify-between group">
       <Link href={`/blog/${slug}`} className="flex-1">
-        <h2 className="text-sm lg:text-lg group-hover:text-blue-400 transition-colors">
+        <h2 className="text-md lg:text-lg group-hover:text-blue-400 transition-colors">
           {title}
         </h2>
       </Link>
