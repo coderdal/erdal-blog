@@ -1,5 +1,7 @@
 import { CalendarIcon } from "@/app/components/Home/icons";
 
+import Content from "@/app/components/Blog/Content";
+
 async function getPost(id) {
   const res = await fetch(`http://localhost:3000/api/post?id=${id}`);
 
@@ -38,6 +40,8 @@ const Blog = async ({ params }) => {
             })}
           </div>
         </div>
+
+        <Content>{content}</Content>
       </article>
     </main>
   );

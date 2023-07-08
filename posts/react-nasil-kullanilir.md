@@ -9,9 +9,8 @@ blog_categories: ["Teknoloji", "React"]
 selam paragraf **_ben_**
 
 ```html
-<div>
-  <h2>test</h2>
-</div>
+<h2>test</h2>
+<strong>hhh</strong>
 ```
 
 - First item
