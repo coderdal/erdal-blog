@@ -2,10 +2,10 @@ import Link from "next/link";
 
 import { CalendarIcon } from "@/app/components/Home/icons";
 
-const RecentBlog = ({ title, time, tags }) => {
+const RecentBlog = ({ title, time, tags, slug }) => {
   return (
     <div className="md:mb-3 md:mr-3 recent-blog max-md:mt-4">
-      <Link href={"/"}>
+      <Link href={`/blog/${slug}`}>
         <h2 className="recent-blog-title">{title}</h2>
         <div className="recent-blog-details">
           <div className="recent-blog-date">
