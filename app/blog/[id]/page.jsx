@@ -2,6 +2,8 @@ import { CalendarIcon } from "@/app/components/Home/icons";
 
 import Content from "@/app/components/Blog/Content";
 
+import "@/app/components/Blog/styles.css";
+
 async function getPost(id) {
   const res = await fetch(`http://localhost:3000/api/post?id=${id}`);
 
@@ -41,7 +43,9 @@ const Blog = async ({ params }) => {
           </div>
         </div>
 
-        <Content>{content}</Content>
+        <div className="content mt-4">
+          <Content>{content}</Content>
+        </div>
       </article>
     </main>
   );

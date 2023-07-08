@@ -13,7 +13,7 @@ async function getPosts() {
 const Blog = async () => {
   const { posts } = await getPosts();
 
-  console.log(posts);
+  // console.log(posts);
 
   return (
     <main className="w-full max-w-7xl mx-auto min-h-full  flex flex-col mt-4">

@@ -33,6 +33,18 @@ const Content = ({ children }) => {
               }
             },
           },
+          code: {
+            component: (props) => {
+              return React.createElement(
+                "code",
+                {
+                  className:
+                    "bg-blue-200 bg-opacity-10 rounded-sm text-blue-300 text-sm px-1.5 py-0.5",
+                },
+                React.createElement("code", null, props.children)
+              );
+            },
+          },
         },
       }}
     >

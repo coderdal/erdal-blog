@@ -1,0 +1,43 @@
+.content > div {
+  word-wrap: break-word;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji;
+
+  @apply container mx-auto text-sm text-base lg:text-xl text-gray-200 pt-2;
+}
+
+.content > div > *:not(:last-child) {
+  @apply my-2;
+}
+
+.content > div > h1 {
+  @apply text-2xl font-semibold;
+}
+
+.content > div > h2 {
+  @apply text-xl font-semibold;
+}
+
+.content > div > h3 {
+  @apply text-lg font-semibold;
+}
+
+.content > div > h4 {
+  @apply text-base font-semibold;
+}
+
+.content > div > h5 {
+  @apply text-sm font-semibold;
+}
+
+.content > div > h6 {
+  @apply text-xs font-semibold;
+}
+
+.content > div > ul {
+  @apply list-disc list-inside;
+}
+
+.content > div > ol {
+  @apply list-decimal list-inside;
+}
