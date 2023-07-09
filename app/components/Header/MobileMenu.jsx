@@ -1,6 +1,27 @@
+import { useEffect, useRef } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+import {
+  menuContext,
+  useContext,
+} from "@/app/components/Header/MobileMenuContext";
 
 const MobileMenu = () => {
+  const pathname = usePathname();
+  const isMounted = useRef(true);
+
+  const { setIsMenu } = useContext(menuContext);
+
+  useEffect(() => {
+    if (isMounted.current) {
+      isMounted.current = false;
+      return;
+    }
+
+    setIsMenu(false);
+  }, [pathname, setIsMenu]);
+
   return (
     <div className="md:hidden relative" role="dialog" aria-modal="true">
       <div className="fixed inset-0 z-10 top-[121px]"></div>
