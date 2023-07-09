@@ -6,12 +6,16 @@ import MobileMenu from "@/app/components/Header/MobileMenu";
 
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 import "@/app/components/Header/styles.css";
 import { CloseMenuIcon, OpenMenuIcon } from "@/app/components/Header/icons";
+import { motion } from "framer-motion";
 
 const Header = () => {
   const [isMenu, setIsMenu] = useState(false);
+
+  const currentPath = usePathname();
 
   const toggleMobileMenu = () => {
     setIsMenu((prev) => !prev);
@@ -55,12 +59,30 @@ const Header = () => {
             {/* Desktop Nav Links */}
             <div className="hidden md:flex ">
               <Link href="/" className="nav-link-desktop">
+                {currentPath === "/" ? (
+                  <motion.span
+                    layoutId="underline"
+                    className="nav-link-desktop-active"
+                  />
+                ) : null}
                 Home
               </Link>
               <Link href="/blog" className="nav-link-desktop">
+                {currentPath == "/blog" ? (
+                  <motion.span
+                    layoutId="underline"
+                    className="nav-link-desktop-active"
+                  />
+                ) : null}
                 Blog
               </Link>
               <Link href="/contact" className="nav-link-desktop">
+                {currentPath == "/contact" ? (
+                  <motion.span
+                    layoutId="underline"
+                    className="nav-link-desktop-active"
+                  />
+                ) : null}
                 Contact
               </Link>
             </div>
