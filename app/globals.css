@@ -20,6 +20,10 @@
   .blog-tag {
     @apply bg-slate-800 px-1 rounded-sm uppercase cursor-default;
   }
+
+  .skeletonContainer {
+    @apply h-screen w-full max-w-7xl mx-auto max-xl:px-5;
+  }
 }
 
 ::-webkit-scrollbar {
