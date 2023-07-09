@@ -1,4 +1,4 @@
-import { GithubIcon, LinkedinIcon } from "@/app/components/Home/icons";
+import { GithubIcon, LinkedinIcon } from "@/app/components/Icons/index";
 
 const HomeBanner = () => {
   return (

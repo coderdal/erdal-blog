@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { CalendarIcon } from "@/app/components/Home/icons";
+import { CalendarIcon } from "@/app/components/Icons/index";
 
 const RecentBlog = ({ title, time, tags, slug }) => {
   return (

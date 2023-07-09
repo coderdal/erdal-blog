@@ -1,4 +1,4 @@
-import { CalendarIcon } from "@/app/components/Home/icons";
+import { CalendarIcon } from "@/app/components/Icons/index";
 
 import Content from "@/app/components/Blog/Content";
 
