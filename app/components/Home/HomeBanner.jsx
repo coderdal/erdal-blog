@@ -3,7 +3,7 @@ import { GithubIcon, LinkedinIcon } from "@/app/components/Icons/index";
 const HomeBanner = () => {
   return (
     <section className="p-6 lg:p-10 border rounded-md  border-blue-100/10 max-xl:mx-3">
-      <h1 className="text-3xl font-bold">Bloguma Hoşgeldin !</h1>
+      <h1 className="text-3xl font-bold">Hello World !</h1>
 
       <p className="text-md lg:text-lg text-gray-400 py-4">
         Ben <strong>Muhammed ERDAL</strong>, Yazılım Geliştiricisiyim.
