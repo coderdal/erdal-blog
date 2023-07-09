@@ -17,7 +17,7 @@ const Blog = async () => {
 
   return (
     <main className="w-full max-w-7xl mx-auto min-h-full  flex flex-col mt-4">
-      <section className="w-full max-w-7xl mx-auto py-5 lg:py-6 max-xl:px-6 max-sm:px-4">
+      <section className="w-full max-w-7xl mx-auto py-5 lg:py-6 max-xl:px-6 max-sm:px-4 px-2">
         <h1 className="font-extrabold text-4xl">Blog</h1>
 
         <div className="mt-4 flex flex-col">

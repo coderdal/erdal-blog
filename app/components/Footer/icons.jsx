@@ -1,11 +1,7 @@
-const TailwindLogo = () => {
+const TailwindLogo = (props) => {
+  const classes = `text-slate-900 dark:text-white w-auto h-5 ${props.className}`;
   return (
-    <svg
-      viewBox="0 0 248 31"
-      className="text-slate-900 dark:text-white w-auto h-5"
-      height="30"
-      width="200"
-    >
+    <svg viewBox="0 0 248 31" className={classes} height="30" width="200">
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -22,13 +18,15 @@ const TailwindLogo = () => {
   );
 };
 
-const NextjsLogo = () => {
+const NextjsLogo = (props) => {
+  const classes = `text-slate-900 dark:text-white w-auto h-5 ${props.className}`;
   return (
     <svg
       aria-label="Next.js logotype"
       height="14"
       role="img"
       viewBox="0 0 394 79"
+      className={classes}
     >
       <path
         d="M261.919 0.0330722H330.547V12.7H303.323V79.339H289.71V12.7H261.919V0.0330722Z"

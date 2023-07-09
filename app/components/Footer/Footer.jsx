@@ -7,11 +7,11 @@ const Footer = () => {
         <div className="flex justify-center items-center m-3 font-bold">
           Made with
           <span className="mx-2">
-            <TailwindLogo />
+            <TailwindLogo className="max-md:h-4 max-md:w-50" />
           </span>
           &
           <span className="mx-2">
-            <NextjsLogo />
+            <NextjsLogo className="max-md:h-3 max-md:w-22" />
           </span>
         </div>
         <a

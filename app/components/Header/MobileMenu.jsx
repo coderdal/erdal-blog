@@ -11,10 +11,10 @@ const MobileMenu = () => {
               <Link href="/" className="nav-link-mobile">
                 Home
               </Link>
-              <Link href="/" className="nav-link-mobile">
+              <Link href="/blog" className="nav-link-mobile">
                 Blog
               </Link>
-              <Link href="/" className="nav-link-mobile">
+              <Link href="/contact" className="nav-link-mobile">
                 Contact
               </Link>
             </div>
