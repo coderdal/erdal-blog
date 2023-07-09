@@ -76,14 +76,14 @@ const Header = () => {
                 ) : null}
                 Blog
               </Link>
-              <Link href="/contact" className="nav-link-desktop">
-                {currentPath == "/contact" ? (
+              <Link href="/about" className="nav-link-desktop">
+                {currentPath == "/about" ? (
                   <motion.span
                     layoutId="underline"
                     className="nav-link-desktop-active"
                   />
                 ) : null}
-                Contact
+                About
               </Link>
             </div>
           </nav>

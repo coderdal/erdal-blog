@@ -35,8 +35,8 @@ const MobileMenu = () => {
               <Link href="/blog" className="nav-link-mobile">
                 Blog
               </Link>
-              <Link href="/contact" className="nav-link-mobile">
-                Contact
+              <Link href="/about" className="nav-link-mobile">
+                About
               </Link>
             </div>
           </div>
