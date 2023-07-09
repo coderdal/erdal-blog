@@ -22,7 +22,7 @@
   }
 
   .skeletonContainer {
-    @apply h-screen w-full max-w-7xl mx-auto max-xl:px-5;
+    @apply h-screen w-full max-w-7xl mx-auto max-xl:px-10;
   }
 }
 

@@ -8,10 +8,11 @@ const Loading = () => {
         <Skeleton
           width="25%"
           height="2em"
-          style={{ margin: "2.6em 0 2.2em 0" }}
+          style={{ margin: "2.6em 0 1em 0" }}
         />
+        <Skeleton height="1.3em" style={{ marginBottom: "0.2em" }} />
 
-        <Skeleton count={12} height="1.5em" style={{ marginBottom: "0.2em" }} />
+        <Skeleton count={5} height="1.5em" style={{ marginBottom: "0.2em" }} />
       </SkeletonTheme>
     </div>
   );
