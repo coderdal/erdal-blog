@@ -4,11 +4,14 @@ import Content from "@/app/components/Blog/Content";
 
 import "@/app/components/Blog/styles.css";
 
+import { notFound } from "next/navigation";
+
 async function getPost(id) {
   const res = await fetch(`http://localhost:3000/api/post?id=${id}`);
 
   if (!res.ok) {
-    throw new Error("Failed to fetch data");
+    // throw new Error("Failed to fetch data");
+    notFound();
   }
 
   return res.json();
