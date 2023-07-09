@@ -18,7 +18,11 @@ async function getPost(id) {
 }
 
 const Blog = async ({ params }) => {
-  const data = await getPost(params.id);
+  let slug = params.id;
+
+  slug.replace(/[^a-z-]|^-|-$|[^a-z-].*[^a-z-]/g, "");
+
+  const data = await getPost(slug);
 
   const { blog_title, blog_date, blog_categories, blog_slug, content } = data;
 
